@@ -77,12 +77,20 @@ public class bank
 
         public void setIncomingInterest(double incomingInterest)
         {//Sets the linked Incoming-Interest-Rate of the Payment
-            this.incomingInterest = incomingInterest;
+            if(incomingInterest >= 0.0 && incomingInterest <= 1.0)
+                this.incomingInterest = incomingInterest;
+            else {
+                System.out.println("Incoming-Interest has to be a number between 0 and 1.");
+            }
         }
 
         public void setOutgoingInterest(double outgoingInterest)
         {//Sets the linked Outgoing-Interest-Rate of the Payment
-            this.outgoingInterest = outgoingInterest;
+            if(outgoingInterest >= 0.0 && outgoingInterest <= 1.0)
+                this.outgoingInterest = outgoingInterest;
+            else {
+                System.out.println("Outgoing-Interest has to be a number between 0 and 1.");
+            }
         }
 
         public void printObject()
@@ -147,7 +155,13 @@ public class bank
 
         public void setAmount(double amount)
         {//Sets the Amount linked to the Transfer
-            this.amount = amount;
+
+            if(amount > 0)
+                this.amount = amount;
+            else
+            {
+                System.out.println("Amount has to be a numbers above 0;");
+            }
         }
 
         public String getDescription()

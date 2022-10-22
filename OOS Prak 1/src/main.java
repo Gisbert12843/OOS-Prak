@@ -3,7 +3,7 @@ public class main
     public static void main(String[] args)
     {
         bank.Payment newPayment1 = new bank.Payment("6.9.20", 420.69, "Pay that1");
-        bank.Payment newPayment2 = new bank.Payment("6.9.21", 421.69, "Pay that2", 10, 10);
+        bank.Payment newPayment2 = new bank.Payment("6.9.21", 421.69, "Pay that2", 1, 1);
         bank.Payment newPayment3 = new bank.Payment(newPayment1);
         newPayment1.printObject();
         newPayment2.printObject();
