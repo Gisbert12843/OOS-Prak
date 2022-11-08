@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>513</y>
+      <w>693</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>bank::Payment
+--
+-incomingInterest: double
+-outgoingInterest: double
+--
++Payment(String pDate, double pAmount, String pDescription): ctor
++Payment(String pDate, double pAmount, String pDescription, double pIncomingInterest, double pOutgoingInterest): ctor
++Payment(//Copy-Constructor&#13;
+Payment pPayment): ctor
++getIncomingInterest(): double
++getOutgoingInterest(): double
++setIncomingInterest(double incomingInterest): void
++setOutgoingInterest(double outgoingInterest): void
++calculate(): double
++toString(): String
++equals(Object o): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>549</x>
+      <y>108</y>
+      <w>414</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>bank::Transaction
+--
+#date: String
+#amount: double
+#description: String
+--
++Transaction(String pDate, double pAmount, String pDescription): ctor
++getDate(): String
++getAmount(): double
++getDescription(): String
++setDate(String date): void
++setAmount(double amount): void
++setDescription(String description): void
++calculate(): double
++toString(): String
++equals(Object o): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>513</y>
+      <w>585</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>bank::Transfer
+--
+~sender: String
+~recipient: String
+--
++Transfer(String pDate, double pAmount, String pDescription): ctor
++Transfer(String pDate, double pAmount, String pDescription, String pSender, String pRecipient): ctor
++Transfer(//Copy-Constructor&#13;
+Transfer pTransfer): ctor
++setAmount(double amount): void
++getSender(): String
++setSender(String sender): void
++getRecipient(): String
++setRecipient(String recipient): void
++toString(): String
++equals(Object o): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1107</x>
+      <y>180</y>
+      <w>126</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+bank::CalculateBill
+--
+--
++calculate(): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1359</x>
+      <y>990</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>::main
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>99</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>360</y>
+      <w>72</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extends</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>360</y>
+      <w>72</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extends</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>
